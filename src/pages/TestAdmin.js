@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Table, Modal, Input } from "antd";
 import { message, Popconfirm } from 'antd';
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import Swal from "sweetalert2";
+
 import {useHistory} from 'react-router-dom'
 import Loader from "../components/Loader";
 import Error from "../components/Error";
@@ -43,14 +43,16 @@ function AdminRoomScreen() {
         );
         console.log(result)
         setLoading(false);
-        Swal.fire(
-          "Congratulations",
-          "Your Account Deleted Successfullyl",
-          "success"
-        ).then((result) => {
-            fetchMyData();
+        alert(" Congratulations Your Account Booked Successfully, Check Your Email")
+        fetchMyData();
+        // Swal.fire(
+        //   "Congratulations",
+        //   "Your Account Deleted Successfullyl",
+        //   "success"
+        // ).then((result) => {
+        //     fetchMyData();
         
-        });
+        // });
       } catch (error) {
         setError(error);
         console.log(error)

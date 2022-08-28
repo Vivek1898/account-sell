@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Form, Input, InputNumber, Button, Select } from "antd";
 import FileUpload from "../components/FileUpload"
-import Swal from "sweetalert2";
+
 
 import Loader from "../components/Loader";
 import Error from "../components/Error";
@@ -54,7 +54,8 @@ function AdminAddLaundaryScreen() {
     setLoading(true);
     try {
       const data = (await axios.post(`${process.env.REACT_APP_GLOBAL_API}/api/addlaundary`,{Images, values,tokenv:localStorage.getItem("access_token")})).data;
-      Swal.fire("Congratulations", "Your Account Added Successfully", "success");
+    //  Swal.fire("Congratulations", "Your Account Added Successfully", "success");
+     alert ("Congratulations Your Account Added Successfully")
       form.resetFields();
       setImagevalues(emptyState)
       setImages(Images.splice(0, Images.length))
@@ -63,7 +64,8 @@ function AdminAddLaundaryScreen() {
     } catch (error) {
       console.log(error);
       setError(error);
-      Swal.fire("Opps", "Error:" + error, "error");
+      alert(" Opps Error")
+     // Swal.fire("Opps", "Error:" + error, "error");
     }
 
     setLoading(false);
