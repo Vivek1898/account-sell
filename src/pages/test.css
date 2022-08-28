@@ -120,25 +120,25 @@
       .title{
         color:#ffffff;
         font-family: roboto;
-        weight:300;
+        font-weight:300;
       }
       .title-2{
         color:#2D354A;
         font-family: roboto;
-        weight:300;
+        font-weight:300;
       }
       .followers{
         color:#666B7D;
         font-family:10px;
         margin-top:10px;
         font-family: roboto;
-        weight:100;
+        font-weight:100;
       }
       
       .job-title{
         color:#7C8097;
         font-size:12px;
-        weight:100;
+        font-weight:100;
         font-family:roboto;
       }
       
