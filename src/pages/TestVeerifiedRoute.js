@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import StripeCheckout from "react-stripe-checkout";
-// import Swal from "sweetalert2";
+ import Swal from "sweetalert2";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { Input } from 'antd';
@@ -79,14 +79,18 @@ function MessBookingscreen({ match }) {
       );
       console.log(result)
       setLoading(false);
-    //   Swal.fire(
-    //     "Congratulations",
-    //     "Your Mess Booked Successfully",
-    //     "success"
-    //   ).then((result) => {
-    //     history.push("/profile");
-    //     toast.success("Check your bookings")
-    //   });
+      Swal.fire(
+        "Congratulations",
+        "Your Request Applied Successfully",
+        "success"
+      ).then((result) => {
+        history.push("/");
+        
+      });
+      setEmail("");
+      setName("");
+      setMobile("");
+      setPrice("");
     } catch (error) {
       setError(error);
       console.log(error)

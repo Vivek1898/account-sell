@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import StripeCheckout from "react-stripe-checkout";
-// import Swal from "sweetalert2";
+ import Swal from "sweetalert2";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { Input } from 'antd';
@@ -24,10 +24,25 @@ function MessBookingscreen({ match }) {
   const fromdate = moment(match.params.fromdate, "DD-MM-YYYY");
   const todate = moment(match.params.todate, "DD-MM-YYYY");
 
+
+  function ValidateEmail(mail) 
+    {
+     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+      {
+        return (true)
+      }
+      Swal.fire("Opps", "Error:" + " You have entered an invalid email address!", "error");
+      //  alert("You have entered an invalid email address!")
+        return (false)
+    }
+
   const history = useHistory();
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("currentUser"));
+   
   
+
+    
+
     async function fetchMyAPI() {
       try {
         setError("");
@@ -60,41 +75,49 @@ function MessBookingscreen({ match }) {
 
   const onToken = async (token) => {
     console.log(token);
-    const bookingDetails = {
-      room,
-    Name,
-    Email,
-    Mobile,
-      totalAmount,
-    
-      token,
-    };
-    console.log(bookingDetails)
 
 
-    try {
-      setLoading(true);
-      const result = await axios.post(
-        `${process.env.REACT_APP_GLOBAL_API}/api/bookpost`,
-        bookingDetails
-      );
-      setLoading(false);
-      alert(" Congratulations Your Account Booked Successfully, Check Your Email")
-      history.push("/");
-    //   Swal.fire(
-    //     "Congratulations",
-    //     "Your Account Booked Successfully, Check Your Email",
-    //     "success"
-    //   ).then((result) => {
-    //     history.push("/");
-      
-    //   });
-    } catch (error) {
-      setError(error);
-      console.log(error)
-    //   Swal.fire("Opps", "Error:" + error, "error");
-    }
+  const bookingDetails = {
+    room,
+  Name,
+  Email,
+  Mobile,
+    totalAmount,
+  
+    token,
+  };
+  console.log(bookingDetails)
+
+
+  try {
+    setLoading(true);
+    const result = await axios.post(
+      `${process.env.REACT_APP_GLOBAL_API}/api/bookpost`,
+      bookingDetails
+    );
     setLoading(false);
+   // alert(" Congratulations Your Account Booked Successfully, Check Your Email")
+    history.push("/");
+    Swal.fire(
+      "Congratulations",
+      "Your Account Booked Successfully, Check Your Email",
+      "success"
+    ).then((result) => {
+      history.push("/");
+    
+    });
+  setEmail("");
+  setMobile("");
+  setName("");
+  } catch (error) {
+    setError(error);
+    console.log(error)
+    Swal.fire("Opps", "Error:" + error, "error");
+  }
+  setLoading(false);
+
+
+ 
    
   };
 
@@ -110,8 +133,14 @@ function MessBookingscreen({ match }) {
         <div className="row justify-content-center mt-5 bs">
           <div className="col-md-6">
           <input type="text" className="form-control mb-4 p-4"   placeholder="Name" value={Name} onChange={e=>setName(e.target.value)} />
-          <input type="text"  className="form-control mb-4 p-4" placeholder="Email"  value={Email} onChange={e=>setEmail(e.target.value)} />
-          <input type="text"  className="form-control mb-4 p-4" placeholder="Mobile" value={Mobile} onChange={e=>setMobile(e.target.value)} />
+          <input type="email"  className="form-control mb-4 p-4" placeholder="Email"  value={Email} onChange={(e)=>{
+
+setEmail(e.target.value)
+          }} />
+          <input type="mobile"  className="form-control mb-4 p-4" placeholder="Mobile" value={Mobile} onChange={e=> {
+            setMobile(e.target.value);
+            ValidateEmail(Email)
+          }} />
        
            
           </div>
