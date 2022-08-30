@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 import Nav from "./components/Nav";
-
+import Footer from "./components/footer/footer"
 import TestRoute from "./pages/TestRoute"
 import MessBookingScreen from "./pages/TestBookingRoute"
 
@@ -41,6 +41,7 @@ function App() {
         <AuthRoute exact path="/standard" component={Standard} />
         <AuthRoute exact path="/premium" component={Premium} /> */}
       </Switch>
+      <Footer/>
     </Router>
   );
 }
