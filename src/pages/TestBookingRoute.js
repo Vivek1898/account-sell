@@ -7,9 +7,9 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { Input } from 'antd';
 import {useHistory} from 'react-router-dom'
-
-
-
+import LoadingCard from "../components/loadingCard";
+import { Button } from 'antd';
+import { RightCircleOutlined  } from '@ant-design/icons';
 function MessBookingscreen({ match }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -126,7 +126,7 @@ function MessBookingscreen({ match }) {
 
     <div className="m-5">
       {loading ? (
-        <Loader></Loader>
+        <LoadingCard count={9} />
       ) : error.length > 0 ? (
         <Error msg={error}></Error>
       ) : (
@@ -172,10 +172,13 @@ setEmail(e.target.value)
                 token={onToken}
                 stripeKey={"pk_test_51LL6J6SD2pPj4zIil25zSBMX0sRU8ioUCji8FGDZs4DYmWnVsfzNjB3aB5V7Ff54njSZn6JFWsXki57AIYbW6rEY00XBYRQlwk"}
               >
-                <button 
-                className="btn btn-primary"
-         
-                >Pay Now</button>
+                <Button 
+               type="primary"
+               size="large"
+               icon={<RightCircleOutlined />}
+               style={{"height":"50px","color":"aliceblue","backgroundColor":"cornflowerblue"}}
+              disabled={!Name || !Email || !Mobile}
+                >Pay Now</Button>
               </StripeCheckout>
             </div>
           </div>

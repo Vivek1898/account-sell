@@ -10,7 +10,7 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 
 import { Link } from "react-router-dom";
-
+import LoadingCard from "../components/loadingCard";
 
 function AdminMaidScreen() {
   const [maids, setMaid] = useState([]);
@@ -63,7 +63,7 @@ function AdminMaidScreen() {
 
     <div class="card-columns text-center " >
       {loading ? (
-        <Loader></Loader>
+           <LoadingCard count={9} />
       ) : error.length > 0 ? (
         <Error msg={error}></Error>
       ) : (

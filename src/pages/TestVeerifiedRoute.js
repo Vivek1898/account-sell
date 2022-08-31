@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 import Error from "../components/Error";
 import { Input } from 'antd';
 import {useHistory} from 'react-router-dom'
-
+import LoadingCard from "../components/loadingCard";
 
 function MessBookingscreen({ match }) {
   const [loading, setLoading] = useState(true);
@@ -115,7 +115,7 @@ function MessBookingscreen({ match }) {
 
     <div className="m-5">
       {loading ? (
-        <Loader></Loader>
+      <LoadingCard count={6} />
       ) : error.length > 0 ? (
         <Error msg={error}></Error>
       ) : (
