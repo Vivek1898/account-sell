@@ -90,10 +90,7 @@ function AdminMaidScreen() {
 
 
 <div class="mt-4 mb-4 p-3 ">
-<h1 className="italic
-">
-      Hello world!
-    </h1>
+
                <div class=" card p-4  "> 
                <div class=" image d-flex flex-column justify-content-center align-items-center">
                  <button class="btn btn-secondary">
