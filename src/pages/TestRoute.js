@@ -8,10 +8,10 @@ import { Table, Tag, Space } from "antd";
 import "./test.css"
 import Loader from "../components/Loader";
 import Error from "../components/Error";
-
+import Review from "../components/review"
 import { Link } from "react-router-dom";
 import LoadingCard from "../components/loadingCard";
-
+import Testimonials from "../components/testionials"
 function AdminMaidScreen() {
   const [maids, setMaid] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -60,7 +60,7 @@ function AdminMaidScreen() {
         </div>
       )}
     </div> */}
-
+   <Testimonials/>
     <div class="card-columns text-center " >
       {loading ? (
            <LoadingCard count={9} />
@@ -90,6 +90,10 @@ function AdminMaidScreen() {
 
 
 <div class="mt-4 mb-4 p-3 ">
+<h1 className="italic
+">
+      Hello world!
+    </h1>
                <div class=" card p-4  "> 
                <div class=" image d-flex flex-column justify-content-center align-items-center">
                  <button class="btn btn-secondary">
@@ -105,7 +109,7 @@ function AdminMaidScreen() {
 
                          <div class="d-flex flex-row justify-content-center align-items-center mt-1"> 
                          
-                         <span class="number">{x.rentperday} ₹ <span class="follow">Rate</span></span>
+                         <span class="number">{x.rentperday} ₹ <span class="follow">Price</span></span>
                          </div>
                          
                           <div class=" d-flex mt-2"> <Link to={`/bookmess/${x._id}`}> <button class="btn1 btn-dark">Book Now</button> </Link></div>
@@ -200,7 +204,10 @@ function AdminMaidScreen() {
         })
       )}
     </div>
+
+ <Review/>
     </div>
+    
   );
 }
 

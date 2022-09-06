@@ -8,6 +8,7 @@ import TestRoute from "./pages/TestRoute"
 import MessBookingScreen from "./pages/TestBookingRoute"
 
 import Verify from "./pages/TestVeerifiedRoute"
+import Account from "./pages/TestSellsSite"
 
 import AdminScreen from "./pages/AdminScreen"
 function App() {
@@ -30,6 +31,8 @@ function App() {
         <Route exact path="/admin-verified" component={VerifiedAccounts} /> */}
         <Route exact path="/req" component={Verify} />
         <Route exact path="/" component={TestRoute} />
+        <Route exact path="/add-account" component={Account} />
+
         
 
         {/* <Route exact path="/register" component={Register} />

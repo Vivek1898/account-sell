@@ -68,6 +68,9 @@ const Nav = () => {
        <li class="nav-item">
         <Link class="nav-link" to="#">About</Link>
       </li>     
+      <li class="nav-item">
+        <Link class="nav-link" to="/add-account">Sell</Link>
+      </li>  
     </ul>
   </div>  
 </nav>

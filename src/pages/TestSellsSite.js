@@ -8,7 +8,7 @@ import Error from "../components/Error";
 import { Input } from 'antd';
 import {useHistory} from 'react-router-dom'
 import LoadingCard from "../components/loadingCard";
-import photo from "../components/ver.jpeg"
+
 function MessBookingscreen({ match }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -19,6 +19,7 @@ function MessBookingscreen({ match }) {
   const[Email,setEmail]=useState("");
   const[Mobile,setMobile]=useState("");
   const[Price,setPrice]=useState("");
+  const[Account,setAccount]=useState("");
 
   const messid = match.params.messid;
   const fromdate = moment(match.params.fromdate, "DD-MM-YYYY");
@@ -68,13 +69,14 @@ function MessBookingscreen({ match }) {
         Email,
         Mobile,
           Price,
+          Account
         
         
         };
         console.log(bookingDetails)
       setLoading(true);
       const result = await axios.post(
-        `${process.env.REACT_APP_GLOBAL_API}/api/addVerified`,
+        `${process.env.REACT_APP_GLOBAL_API}/api/addAccount`,
         bookingDetails
       );
       console.log(result)
@@ -119,38 +121,28 @@ function MessBookingscreen({ match }) {
       ) : error.length > 0 ? (
         <Error msg={error}></Error>
       ) : (
-        <div>
-<div class="m-0 p-0">
-<img src={photo} class="img-fluid" alt="Responsive image"/>
-<button className="btn btn-secondary">GET STARTED</button>
- 
-</div>
-
-<div className="row justify-content-center mt-5 bs">
-   
+        <div className="row justify-content-center mt-5 bs">
+          <div className="col-md-6">
+            <h1>Verified Accounts</h1>
+            <form onSubmit={handleSubmit}>
+          <input type="text" className="form-control mb-4 p-4"   placeholder="Name" value={Name} onChange={e=>setName(e.target.value)} />
+          <input type="text"  className="form-control mb-4 p-4" placeholder="Email"  value={Email} onChange={e=>setEmail(e.target.value)} />
+          <input type="text"  className="form-control mb-4 p-4" placeholder="Mobile" value={Mobile} onChange={e=>setMobile(e.target.value)} />
+          <input  type="text" className="form-control mb-4 p-4" placeholder="Account" value={Account} onChange={e=>setAccount(e.target.value)} />
+          <input  type="text" className="form-control mb-4 p-4" placeholder="Price" value={Price} onChange={e=>setPrice(e.target.value)} />
+          <button
+            type="submit"
+            className="btn btn-primary btn-block p-2"
+             disabled={!Name || !Email || !Mobile || !Price || !Account}
+          >
+          Apply For Sell
+          </button>
          
-   <div className="col-md-6">
-     <h1>Verifiedd Accounts</h1>
-     <form onSubmit={handleSubmit}>
-   <input type="text" className="form-control mb-4 p-4"   placeholder="Name" value={Name} onChange={e=>setName(e.target.value)} />
-   <input type="text"  className="form-control mb-4 p-4" placeholder="Email"  value={Email} onChange={e=>setEmail(e.target.value)} />
-   <input type="text"  className="form-control mb-4 p-4" placeholder="Mobile" value={Mobile} onChange={e=>setMobile(e.target.value)} />
-   <input  type="text" className="form-control mb-4 p-4" placeholder="Price" value={Price} onChange={e=>setPrice(e.target.value)} />
-   <button
-     type="submit"
-     className="btn btn-primary btn-block p-2"
-      disabled={!Name || !Email || !Mobile || !Price}
-   >
-    Request a Demo
-   </button>
-  
-   </form>
-     {/* <img src={room.imageurls[0]} alt="" className="bigimg" style={{"width":"100%"}} /> */}
-   </div>
+          </form>
+            {/* <img src={room.imageurls[0]} alt="" className="bigimg" style={{"width":"100%"}} /> */}
+          </div>
 
- </div>
         </div>
-        
       )}
     </div>
     </div>

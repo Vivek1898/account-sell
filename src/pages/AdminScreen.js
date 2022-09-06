@@ -3,6 +3,7 @@ import AdminAddScreen from "./TestAdd"
 import AdminAllPostScreen from "./TestAdmin"
 import AdminVerifiedScreen from "./TestAdminVerified"
 import AdminBookingScreen from "./TestAdminBooking"
+import AdminAccountSell from "./TestAdminSells"
 import { Tabs } from "antd";
 const { TabPane } = Tabs;
 
@@ -25,6 +26,9 @@ function AdminScreen() {
           </TabPane>
           <TabPane tab="Bookings" key="4">
             <AdminBookingScreen></AdminBookingScreen>
+          </TabPane>
+          <TabPane tab="Sell Accounts" key="5">
+            <AdminAccountSell></AdminAccountSell>
           </TabPane>
          
           
