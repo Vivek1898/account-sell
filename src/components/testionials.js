@@ -6,42 +6,69 @@ const test= ()=>{
 
     return(
         <div>
-<div class="text-center ">
+{/* <div class="text-center ">
 
 <img src={sell} class="img-fluid" alt="Responsive image"/>
 
  
+</div> */}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src={sell}  alt="First slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src={sell}  alt="Second slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src={sell}  alt="Third slide"/>
+    </div>
+  </div>
+  {/* <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> */}
 </div>
 <div class="page-scroll"></div>
 
 
 
 
-<section id="features">
+{/* <section id="features">
     <div class="row abc">
 <div class="feature-box col-lg-4">
   <i class="icon  fas fa-check-circle fa-5x"></i>
   <h3>Easy to use.</h3>
-  {/* <p>So easy to use, even your dog could do it.</p> */}
+
 
 </div>
 <div class="feature-box col-lg-4 ">
   <i class="icon fas fa-bullseye fa-5x"></i>
   <h3>Verified Accounts</h3>
-  {/* <p>We have all the dogs, the greatest dogs.</p> */}
+
 
 </div>
 <div class="feature-box col-lg-4 ">
   <i class="icon  fas fa-heart fa-5x"></i>
   <h3>Guaranteed to work.</h3>
-  {/* <p>Find the love of your dog's life or your money back.</p> */}
+
 
 </div>
 </div>
     
     
    
-  </section>
+  </section> */}
 
  {/* <section id="testimonials">
     <div id="testimonials-carsol" class="carousel slide" data-bs-ride="carousel" data-ride="false">

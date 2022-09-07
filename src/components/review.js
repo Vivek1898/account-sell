@@ -7,42 +7,137 @@ const test= ()=>{
         <div>
 
 
- <section id="testimonials">
-    <div id="testimonials-carsol" class="carousel slide" data-bs-ride="carousel" data-ride="false">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <h2>I no longer have to sniff other dogs for<br/>love. I've found the hottest Corgi on<br/>BinDog. Woof.</h2>
-          <img class="test-image" src="dog-img.jpg" alt="dog-profile"/>
-          <em>Pebbles, New York</em>
+
+<section id="testimonials">
+      
+        <div class="testimonial-heading">
+            <span>Comments</span>
+            <h4>Clients Says</h4>
         </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">My dog used to be so lonely, but with <br/> BinDog's help, they've found the love of <br/> their life. I think.</h2>
-          <img class="test-image" src="lady-img.jpg" alt="lady-profile"/>
-          <em>Beverly, Illinois</em> 
-        </div>
-       
-      </div>
-      <a class="carousel-control-prev" href="#testimonials-carsol" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#testimonials-carsol" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </a>
-    </div>
-
-
-
-
-
-
-  
-
+     
+        <div class="testimonial-box-container">
+            
+            <div class="testimonial-box">
+              
+                <div class="box-top">
+               
+                    <div class="profile">
+                   
+                        <div class="profile-img">
+                            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+                        </div>
+                   
+                        <div class="name-user">
+                            <strong>Liam mendes</strong>
+                            <span>@liammendes</span>
+                        </div>
+                    </div>
+                   
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            
+                <div class="client-comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                </div>
+            </div>
     
-
-  </section>
-
+            <div class="testimonial-box">
+             
+                <div class="box-top">
+            
+                    <div class="profile">
+                      
+                        <div class="profile-img">
+                            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+                        </div>
+                   
+                        <div class="name-user">
+                            <strong>Noah Wood</strong>
+                            <span>@noahwood</span>
+                        </div>
+                    </div>
+                 
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+             
+                <div class="client-comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                </div>
+            </div>
+           
+            <div class="testimonial-box">
+            
+                <div class="box-top">
+               
+                    <div class="profile">
+                       
+                        <div class="profile-img">
+                            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+                        </div>
+                       
+                        <div class="name-user">
+                            <strong>Oliver Queen</strong>
+                            <span>@oliverqueen</span>
+                        </div>
+                    </div>
+                 
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+             
+                <div class="client-comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                </div>
+            </div>
+          
+            <div class="testimonial-box">
+             
+                <div class="box-top">
+              
+                    <div class="profile">
+                       
+                        <div class="profile-img">
+                            <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+                        </div>
+                       
+                        <div class="name-user">
+                            <strong>Barry Allen</strong>
+                            <span>@barryallen</span>
+                        </div>
+                    </div>
+                 
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+             
+                <div class="client-comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
+                </div>
+            </div>
+        </div>
+      </section>
 
         </div>
     )

@@ -7,7 +7,7 @@ const LoadingCard = ({ count }) => {
 
     for (let i = 0; i < count; i++) {
       totalCards.push(
-        <Card className="card p-4 " key={i}>
+        <Card className="card card-maker p-4 " key={i}>
           <Skeleton active></Skeleton>
         </Card>
       );

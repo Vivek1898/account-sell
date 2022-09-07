@@ -120,10 +120,31 @@ function MessBookingscreen({ match }) {
         <Error msg={error}></Error>
       ) : (
         <div>
-<div class="m-0 p-0">
-<img src={photo} class="img-fluid" alt="Responsive image"/>
-<button className="btn btn-secondary">GET STARTED</button>
- 
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src={photo}  alt="First slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src={photo}  alt="Second slide"/>
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src={photo}  alt="Third slide"/>
+    </div>
+  </div>
+  {/* <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> */}
 </div>
 
 <div className="row justify-content-center mt-5 bs">
