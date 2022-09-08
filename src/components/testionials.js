@@ -24,7 +24,7 @@ const test= ()=>{
       <img class="img-fluid" src={sell}  alt="First slide"/>
     </div>
     <div class="carousel-item">
-      <img class="img-fluid" src={sell}  alt="Second slide"/>
+      <img class="img-fluid" src={photo}  alt="Second slide"/>
     </div>
     <div class="carousel-item">
       <img class="img-fluid" src={sell}  alt="Third slide"/>

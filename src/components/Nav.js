@@ -50,7 +50,7 @@ const Nav = () => {
 </div> */}
 <nav class="navbar navbar-expand-md navbar-dark ownbg">
 {/* <img src="https://w3hubs.com/wp-content/themes/wpex-magtastico/images/logo.png"/> */}
-  <Link class="navbar-brand text-white pl-5" to="/">LOGO</Link>
+  <Link class="navbar-brand text-white pl-5" to="/">InstaTrade<span>Hub</span></Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>

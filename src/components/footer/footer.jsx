@@ -10,7 +10,7 @@ export const Footer = () => {
 
 			<div class="footer-left">
 
-				<h3>Company<span>logo</span></h3>
+				<h3>InstaTrade<span>Hub</span></h3>
 
 				<p class="footer-links">
 					<a href="#" class="link-1">Home</a>
@@ -26,7 +26,7 @@ export const Footer = () => {
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">Company Name © 2015</p>
+				<p class="footer-company-name">InstaTradeHub © 2022</p>
 			</div>
 
 			<div class="footer-center">

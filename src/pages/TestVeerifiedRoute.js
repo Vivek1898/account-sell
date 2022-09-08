@@ -9,6 +9,7 @@ import { Input } from 'antd';
 import {useHistory} from 'react-router-dom'
 import LoadingCard from "../components/loadingCard";
 import photo from "../components/ver.jpeg"
+import buy from "../components/buy.jpeg"
 function MessBookingscreen({ match }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -131,7 +132,7 @@ function MessBookingscreen({ match }) {
       <img class="img-fluid" src={photo}  alt="First slide"/>
     </div>
     <div class="carousel-item">
-      <img class="img-fluid" src={photo}  alt="Second slide"/>
+      <img class="img-fluid" src={buy}  alt="Second slide"/>
     </div>
     <div class="carousel-item">
       <img class="img-fluid" src={photo}  alt="Third slide"/>
@@ -151,7 +152,7 @@ function MessBookingscreen({ match }) {
    
          
    <div className="col-md-6">
-     <h1>Verifiedd Accounts</h1>
+     <h1>Verified Accounts</h1>
      <form onSubmit={handleSubmit}>
    <input type="text" className="form-control mb-4 p-4"   placeholder="Name" value={Name} onChange={e=>setName(e.target.value)} />
    <input type="text"  className="form-control mb-4 p-4" placeholder="Email"  value={Email} onChange={e=>setEmail(e.target.value)} />

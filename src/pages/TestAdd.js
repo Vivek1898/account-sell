@@ -118,7 +118,7 @@ function AdminAddLaundaryScreen() {
             </Form.Item>
             <Form.Item
               name="description"
-              label="description"
+              label="Followers"
               rules={[
                 {
                   required: true,
@@ -129,7 +129,7 @@ function AdminAddLaundaryScreen() {
             </Form.Item>
             <Form.Item
               name="address"
-              label="Followers"
+              label="Fake Price"
               rules={[
                 {
                   required: true,
@@ -151,7 +151,7 @@ function AdminAddLaundaryScreen() {
             </Form.Item>
             <Form.Item
               name="rentperday"
-              label="Rate"
+              label="Real Price"
               rules={[
                 {
                   required: true,

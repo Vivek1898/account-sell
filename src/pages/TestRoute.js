@@ -95,7 +95,7 @@ function AdminMaidScreen() {
     <p>
     <span>
       
-<del> 99999 ₹</del> <b>{x.rentperday} ₹</b>
+<del> {x.address} $</del> <b>{x.rentperday} $</b>
 
     </span>
     </p>

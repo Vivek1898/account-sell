@@ -168,7 +168,7 @@ setEmail(e.target.value)
             <div style={{ float: "right" }}>
               <StripeCheckout
                 amount={totalAmount * 100}
-                currency="INR"
+                currency="USD"
                 token={onToken}
                 stripeKey={"pk_test_51LL6J6SD2pPj4zIil25zSBMX0sRU8ioUCji8FGDZs4DYmWnVsfzNjB3aB5V7Ff54njSZn6JFWsXki57AIYbW6rEY00XBYRQlwk"}
               >
